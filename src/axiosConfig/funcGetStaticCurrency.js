@@ -4,13 +4,14 @@ import axios from "axios";
 const baseURL = 'https://currency-exchange.p.rapidapi.com/exchange';
 const KEY = '163263d4e0mshde2b148f6f367e6p1a3459jsn1e509fda0bd9';
 const HOST =  'currency-exchange.p.rapidapi.com';
+const test = 'interest-cohort=("https://dmytrovoitovych.github.io/currencyTest/" self)';
 
 
 export const useGetStaticCurrency = () => {
   const [currency, SetCurrency] = useState({ eur: 0, usd: 0 });
 
-  const getUSD = () => axios.get(baseURL, { params: { from: 'USD', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST },redirect: 'follow' });
-  const getEUR = () => axios.get(baseURL, { params: { from: 'EUR', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST },redirect: 'follow' });
+  const getUSD = () => axios.get(baseURL, { params: { from: 'USD', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST,'Permissions-Policy':test  },redirect: 'follow' });
+  const getEUR = () => axios.get(baseURL, { params: { from: 'EUR', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST,'Permissions-Policy' :test },redirect: 'follow' });
 
    
   useEffect(() =>
