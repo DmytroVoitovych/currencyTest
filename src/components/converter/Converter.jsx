@@ -18,7 +18,7 @@ export const Converter = memo(() => {
     const lastFocus = usePrevious(focus);
     
     //arr options
-    const [currentItemFrom, currentItemTo] = emulateArr(from,to);
+    const [currentItemFrom, currentItemTo] = emulateArr(from, to);
 
     const funcRevers = useCallback(() => {
         if (focus === 'from') {
@@ -29,13 +29,19 @@ export const Converter = memo(() => {
     }, [focus, from, to]);
   
     
-    useEffect( () => {
+    useEffect(() => {
     
-        funcGetExchange(amount, funcRevers, setSum); 
+        funcGetExchange(amount, funcRevers, setSum);
         
         return;
-    },[amount,funcRevers]);
-        
+    }, [amount, funcRevers]);
+    
+    useEffect(() => {
+        if (!amount) {
+            setSum('');
+        }
+    },[amount,sum]);
+    
 
     return (<div>
         <form action=""
