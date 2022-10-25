@@ -21,4 +21,4 @@ if(!amount || +amount === 0){
         }
                
        return ; 
-}, 100);
+}, 150);
