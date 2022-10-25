@@ -14,6 +14,7 @@ export const Converter = memo(() => {
     const [amount, setAmount] = useState('');
     const [sum, setSum] = useState('');
     const [focus, setFocus] = useState('');
+    
     //prev state
     const lastFocus = usePrevious(focus);
     
@@ -22,19 +23,19 @@ export const Converter = memo(() => {
 
     const funcRevers = useCallback(() => {
         if (focus === 'from') {
-           
+          
             return { from: from, to: to };
         }
+        
         return { to: from, from: to };
     }, [focus, from, to]);
-  
-    
+              
     useEffect(() => {
     
         funcGetExchange(amount, funcRevers, setSum);
         
         return;
-    }, [amount, funcRevers]);
+    }, [amount,funcRevers,]);
     
     useEffect(() => {
         if (!amount) {
@@ -51,13 +52,14 @@ export const Converter = memo(() => {
         >
             <div css={boxInput}>
                 <label htmlFor='focusfrom'>from: {from}  </label>
-                <input
+                <input 
                 min={0}
                 type="number"
                 name='from'
                 id='focusfrom'    
-                onChange={(e) => setAmount(e.target.value)} value={focus === 'to' ? sum : amount}
-                onClick={() => lastFocus !== 'from' && setAmount(sum)}
+                onChange={(e) => setAmount(e.target.value)}
+                value={focus === 'to' ? sum : amount}
+                onClick={() =>   lastFocus !== 'from' && setAmount(sum)}
                     />
                    
             <select
