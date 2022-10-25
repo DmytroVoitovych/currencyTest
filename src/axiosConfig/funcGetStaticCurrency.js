@@ -9,8 +9,8 @@ const HOST =  'currency-exchange.p.rapidapi.com';
 export const useGetStaticCurrency = () => {
   const [currency, SetCurrency] = useState({ eur: 0, usd: 0 });
 
-  const getUSD = () => axios.get(baseURL, { params: { from: 'USD', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST,'Permissions-Policy': 'interest-cohort=()' } });
-  const getEUR = () => axios.get(baseURL, { params: { from: 'EUR', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST,'Permissions-Policy': 'interest-cohort=()' } });
+  const getUSD = () => axios.get(baseURL, { params: { from: 'USD', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST,'Permissions-Policy': 'interest-cohort=()' },redirect: 'follow' });
+  const getEUR = () => axios.get(baseURL, { params: { from: 'EUR', to: 'UAH', amount: '1' }, headers: { 'X-RapidAPI-Key': KEY, 'X-RapidAPI-Host': HOST,'Permissions-Policy': 'interest-cohort=()' },redirect: 'follow' });
 
    
   useEffect(() =>
