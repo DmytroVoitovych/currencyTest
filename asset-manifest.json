@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/currencyTest/static/css/main.c0aaad9f.css",
-    "main.js": "/currencyTest/static/js/main.3e34e421.js",
+    "main.js": "/currencyTest/static/js/main.c6bc2515.js",
     "static/media/seoulnamsancondensed-extrabold.ttf": "/currencyTest/static/media/seoulnamsancondensed-extrabold.b044ba4cad6a9c360825.ttf",
     "static/media/bread.svg": "/currencyTest/static/media/bread.b7dea0ed79ebaa1446b4299f89c4e435.svg",
     "index.html": "/currencyTest/index.html",
     "main.c0aaad9f.css.map": "/currencyTest/static/css/main.c0aaad9f.css.map",
-    "main.3e34e421.js.map": "/currencyTest/static/js/main.3e34e421.js.map"
+    "main.c6bc2515.js.map": "/currencyTest/static/js/main.c6bc2515.js.map"
   },
   "entrypoints": [
     "static/css/main.c0aaad9f.css",
-    "static/js/main.3e34e421.js"
+    "static/js/main.c6bc2515.js"
   ]
 }
