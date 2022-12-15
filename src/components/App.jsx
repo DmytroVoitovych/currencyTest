@@ -28,7 +28,7 @@ export const App = () => {
             </div>
         </header>
         <main style={{...wraper,paddingTop:'96px', paddingBottom:'107px', textAlign:'center'}}>
-          <Converter/>
+          <Converter />
         </main>
         <footer css={footer} style={wraper}>
           <a href="https://www.linkedin.com/in/dmytro-voitovych/"
